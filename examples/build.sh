@@ -3,7 +3,7 @@
 NAME="$1"
 
 if [[ ! -f "${NAME}.jai" ]]; then
-    echo "Example '$NAME' doesn't exist."
+    echo "Example '${NAME}.jai' doesn't exist."
     exit 1
 fi
 
