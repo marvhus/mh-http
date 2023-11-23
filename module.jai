@@ -19,5 +19,18 @@
 #scope_export
 
 #module_parameters (
+    NO_LOG            := false,
+    NO_PARSE_RESPONSE := false
 );
 
+#if !NO_PARSE_RESPONSE #load "parse_response.jai";
+
+#scope_module
+
+mh_log :: (text: string, args: ..Any) {
+    #if !NO_LOG {
+        log(tprint("MH_LOG: %\n", text), ..args);
+    }
+}
+
+#import "Basic";
