@@ -110,7 +110,7 @@ parse_response_headers :: (text: string, headers: *Table(string, string)) -> suc
         // @NOTE: Does it use ': ' or just ':'???
         found, key, value = split_from_left(line, ": ");
         if !found {
-            mh_log("Failed to parse header. Invalid forating of header. '%'", line);
+            mh_log("Failed to parse header. Invalid formating of header. '%'", line);
             return false, "";
         }
 
