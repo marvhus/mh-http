@@ -20,10 +20,12 @@
 
 #module_parameters (
     NO_LOG            := false,
-    NO_PARSE_RESPONSE := false
+    NO_PARSE_RESPONSE := false,
+    NO_PARSE_REQUEST  := false
 );
 
 #if !NO_PARSE_RESPONSE #load "parse_response.jai";
+#if !NO_PARSE_REQUEST  #load "parse_request.jai";
 
 #scope_module
 
