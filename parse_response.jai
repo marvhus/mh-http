@@ -146,7 +146,7 @@ parse_response_status :: (text: string) -> success: bool, protocol_version: stri
             return false, "", 0, "";
         }
         remainder = right;
-        protocol_version = copy_string(protocol_version);
+        protocol_version = protocol_version;
     }
 
     // status code and text
